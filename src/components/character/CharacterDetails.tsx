@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Modal,
-  Image,
-  View,
-  Text,
-  Button,
-  TouchableOpacity,
-} from "react-native";
+import { Modal, Image, View, Text, TouchableOpacity } from "react-native";
 import { CharacterInterface } from "../..";
 import CharacterDetailsStylesheet from "./styles/CharacterDetails";
 

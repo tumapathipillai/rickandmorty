@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { Image, View } from "react-native";
 import HeaderStylesheet from "./styles/Header";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Text, TouchableOpacity, View } from "react-native";
+import { Image, Text, View } from "react-native";
 import { CharacterInterface } from "../..";
 import CharacterCardStylesheet from "./styles/CharacterCard";
 

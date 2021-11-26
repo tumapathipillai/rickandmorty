@@ -5,7 +5,6 @@ import {
   TouchableOpacity,
   View,
   Text,
-  Image,
 } from "react-native";
 import { useQuery } from "@apollo/client";
 import GetCharacters from "../../queries/GetCharacters";
