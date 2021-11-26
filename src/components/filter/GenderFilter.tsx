@@ -2,7 +2,7 @@ import React from "react";
 import { View } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import { FilterCharacter, Gender } from "../..";
-import { printIntrospectionSchema } from "graphql";
+import FilterStylesheet from "./styles/Filter";
 
 interface Props {
   filter: FilterCharacter;
@@ -11,9 +11,9 @@ interface Props {
 
 export default function GenderFilter(props: Props) {
   return (
-    <View style={{ backgroundColor: "#666666", width: "49%" }}>
+    <View style={FilterStylesheet.View}>
       <Picker
-        style={{ color: "white" }}
+        style={FilterStylesheet.Picker}
         selectedValue={props.filter.gender}
         onValueChange={(value: Gender) => props.setGender(value)}
       >

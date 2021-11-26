@@ -2,6 +2,7 @@ import React from "react";
 import { View } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import { FilterCharacter, Status } from "../..";
+import FilterStylesheet from "./styles/Filter";
 
 interface Props {
   setStatus: (newStatus: Status) => void;
@@ -10,9 +11,9 @@ interface Props {
 
 export default function StatusFilter(props: Props) {
   return (
-    <View style={{ backgroundColor: "#666666", width: "49%" }}>
+    <View style={FilterStylesheet.View}>
       <Picker
-        style={{ color: "white" }}
+        style={FilterStylesheet.Picker}
         selectedValue={props.filter.status}
         onValueChange={(value: Status) => props.setStatus(value)}
       >
