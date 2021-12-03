@@ -6,6 +6,7 @@ import {
   InMemoryCache,
   HttpLink,
 } from "@apollo/client";
+import fetch from "cross-fetch";
 import { StyleSheet, View } from "react-native";
 import CharacterList from "./src/components/character/CharacterList";
 import Header from "./src/components/utils/Header";
@@ -13,6 +14,7 @@ import Header from "./src/components/utils/Header";
 const client = new ApolloClient({
   cache: new InMemoryCache(),
   link: new HttpLink({
+    fetch,
     uri: "https://rickandmortyapi.com/graphql",
   }),
 });
