@@ -16,6 +16,7 @@ export default function StatusFilter(props: Props) {
         style={FilterStylesheet.Picker}
         selectedValue={props.filter.status}
         onValueChange={(value: Status) => props.setStatus(value)}
+        testID="Picker"
       >
         <Picker.Item label="ALL" value="" />
         {Object.keys(Status).map((status) => (

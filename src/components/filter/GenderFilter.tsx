@@ -16,6 +16,7 @@ export default function GenderFilter(props: Props) {
         style={FilterStylesheet.Picker}
         selectedValue={props.filter.gender}
         onValueChange={(value: Gender) => props.setGender(value)}
+        testID="Picker"
       >
         <Picker.Item label="ALL" value="" />
         {Object.keys(Gender).map((gender) => (

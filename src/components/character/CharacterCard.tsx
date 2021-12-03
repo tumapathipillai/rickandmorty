@@ -14,9 +14,12 @@ export default function CharacterCard(props: Props) {
         style={CharacterCardStylesheet.Image}
         source={{ uri: props.character.image }}
         onError={(err) => console.log(err)}
+        testID="CharacterImage"
       />
       <View style={CharacterCardStylesheet.TextContainer}>
-        <Text style={CharacterCardStylesheet.Text}>{props.character.name}</Text>
+        <Text style={CharacterCardStylesheet.Text} testID="CharacterName">
+          {props.character.name}
+        </Text>
       </View>
     </View>
   );

@@ -12,18 +12,19 @@ export default function CharacterDetails(props: Props) {
   return (
     <Modal transparent animationType="fade">
       <View style={CharacterDetailsStylesheet.Container}>
-        <View style={CharacterDetailsStylesheet.Card}>
+        <View style={CharacterDetailsStylesheet.Card} testID="Card">
           <Image
             source={{ uri: props.character.image }}
             style={CharacterDetailsStylesheet.Image}
+            testID="Image"
           />
-          <Text style={CharacterDetailsStylesheet.Name}>
+          <Text style={CharacterDetailsStylesheet.Name} testID="Name">
             {props.character.name}
           </Text>
-          <Text style={CharacterDetailsStylesheet.Text}>
+          <Text style={CharacterDetailsStylesheet.Text} testID="Status">
             Status : {props.character.status}
           </Text>
-          <Text style={CharacterDetailsStylesheet.Text}>
+          <Text style={CharacterDetailsStylesheet.Text} testID="Gender">
             Gender : {props.character.gender}
           </Text>
           <TouchableOpacity

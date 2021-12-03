@@ -46,7 +46,7 @@ export default function CharacterList() {
   };
 
   useEffect(() => {
-    if (!loading) {
+    if (!loading && !error) {
       setCharacters((previousCharacter) => [
         ...previousCharacter,
         ...data.characters.results,
@@ -64,8 +64,8 @@ export default function CharacterList() {
     return <ActivityIndicator color="white" size="large" />;
   } else if (error) {
     return (
-      <>
-        <Text style={{ fontSize: 20, color: "white" }}>
+      <View>
+        <Text style={{ fontSize: 20, color: "white" }} testID="ErrorText">
           An error occured: {error}
         </Text>
         <TouchableOpacity
@@ -81,7 +81,7 @@ export default function CharacterList() {
         >
           <Text style={{ fontSize: 20, color: "white" }}>Reload</Text>
         </TouchableOpacity>
-      </>
+      </View>
     );
   } else {
     return (
@@ -96,6 +96,7 @@ export default function CharacterList() {
           <StatusFilter filter={filters} setStatus={changeStatus} />
         </View>
         <FlatList
+          testID="FlatList"
           data={characters}
           ItemSeparatorComponent={() => ItemSeparator}
           ListHeaderComponent={ItemSeparator}

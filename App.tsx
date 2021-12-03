@@ -1,13 +1,20 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
-import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
-import { StyleSheet, Text, View } from "react-native";
+import {
+  ApolloClient,
+  ApolloProvider,
+  InMemoryCache,
+  HttpLink,
+} from "@apollo/client";
+import { StyleSheet, View } from "react-native";
 import CharacterList from "./src/components/character/CharacterList";
 import Header from "./src/components/utils/Header";
 
 const client = new ApolloClient({
-  uri: "https://rickandmortyapi.com/graphql",
   cache: new InMemoryCache(),
+  link: new HttpLink({
+    uri: "https://rickandmortyapi.com/graphql",
+  }),
 });
 
 export default function App() {
