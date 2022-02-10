@@ -24,7 +24,7 @@ export default function App() {
     <ApolloProvider client={client}>
       <View style={styles.container}>
         <StatusBar style="light" />
-        <Header />
+//        <Header />
         <View style={styles.body}>
           <CharacterList />
         </View>
