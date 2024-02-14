@@ -1,0 +1,13 @@
+query DetailCharacter($id: ID!) {
+    character(id: $id) {
+        id
+        name
+        image
+        status
+        gender
+        episode {
+            name
+            episode
+        }
+    }
+}

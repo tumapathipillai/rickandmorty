@@ -1,0 +1,12 @@
+query ListCharacter($page: Int!, $filter: FilterCharacter!) {
+    characters(page: $page, filter: $filter) {
+        info {
+            next
+        }
+        results {
+            id
+            name
+            image
+        }
+    }
+}
